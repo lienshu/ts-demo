@@ -4,6 +4,7 @@
     {{ head }}
     <div>测试测试测试branch-commit-checkout-commit</div>
     <div>feature/dev分支</div>
+    <div>feature/dev分支1111</div>
     <button @click="changeValue">更改父组件的值</button>
   </div>
 </template>
