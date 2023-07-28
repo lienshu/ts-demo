@@ -2,6 +2,7 @@
   <div class="hello">
     <!-- <h1>{{ msg }}</h1> -->
     {{ head }}
+    <div>feature/dev分支</div>
     <button @click="changeValue">更改父组件的值</button>
   </div>
 </template>
