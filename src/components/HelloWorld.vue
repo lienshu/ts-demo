@@ -4,6 +4,7 @@
     {{ head }}
     <div>测试测试测试branch-commit-checkout-commit</div>
     <div>feature/beta分支</div>
+    但是国家大事富华大厦开发很大随机发回答说饭卡手打
     <button @click="changeValue">更改父组件的值</button>
   </div>
 </template>
