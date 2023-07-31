@@ -3,6 +3,7 @@
     <!-- <h1>{{ msg }}</h1> -->
     {{ head }}
     <div>feature/beta分支</div>
+    <div>git rebase -i 命令</div>
     <button @click="changeValue">更改父组件的值</button>
   </div>
 </template>
