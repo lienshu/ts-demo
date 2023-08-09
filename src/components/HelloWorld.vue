@@ -1,18 +1,26 @@
 <template>
   <div class="hello">
     <!-- <h1>{{ msg }}</h1> -->
-    {{ head }}
+    <!-- {{ head }} -->
+    props: {{ titleMessage }}
     <div>feature/beta分支</div>
     <div>git rebase -i 命令</div>
-    <button @click="changeValue">更改父组件的值</button>
+    <!-- <button @click="changeValue">更改父组件的值</button> -->
   </div>
 </template>
 
-<!-- <script lang="ts" setup>
-const props = defineProps({msg: String})
-console.log(props)
-</script> -->
-<script lang="ts">
+<script lang="ts" setup>
+// const props = defineProps({msg: String})
+// defineProps({
+//   titleMessage: String
+// })
+defineProps<{
+  titleMessage?: String
+}>()
+// const props = defineProps({ titleMessage: String })
+// console.log(props)
+</script>
+<!-- <script lang="ts">
 import { ref, toRef, toRefs } from "vue";
 export default {
   props: {
@@ -33,6 +41,6 @@ export default {
     // return { title };
   },
 };
-</script>
+</script> -->
 
 <style scoped></style>
