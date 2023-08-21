@@ -70,9 +70,8 @@ const convertToPinyin = (text = "", mode = "normal") => {
 const a = ref<{name: string, address: string}>({name: '张三', address: '北京'})
 
 const pressEnter = () => {
-  const {username} = formState.value
+  const {username=''} = formState.value
   formState.value = { ...formState.value, en_username: convertToPinyin(username) }
-  // console.log({...})
   console.log(formState.value, 'formState.value')
   console.log(formState.value.username, formState.value.en_username)
 

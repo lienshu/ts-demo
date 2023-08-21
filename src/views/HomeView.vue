@@ -1,17 +1,19 @@
 <template>
   <div class="home">
     <HelloWorld :title-message="title" />
+    <EventEmit @eventEmit="onEventEmit" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, reactive, onMounted } from "vue";
 import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import EventEmit from "./Home/$event-emit.vue"
 
 export default defineComponent({
   name: "HomeView",
   components: {
-    HelloWorld,
+    HelloWorld,EventEmit
   },
   setup() {
     const title = ref<string>("vue3标题");
@@ -30,10 +32,13 @@ export default defineComponent({
     // console.log(map.get("count").value);
     console.log(obj.count); // 1
     console.log(obj.count === count.value); // true
+    const onEventEmit = (val: any, secVal: any) => {
+      console.log(val, secVal);
+    }
     onMounted(() => {
       document.title = 'vue3练习'
     })
-    return { title };
+    return { title, onEventEmit };
   },
 });
 </script>
